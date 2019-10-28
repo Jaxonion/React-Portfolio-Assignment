@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="application-root"></div>
+
+  <script
+  src="https://unpkg.com/react@16/umd/react.development.js">
+  </script>
+  <script
+  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+  </script>
+  <script
+  src="https://unpkg.com/babel-standalone@6/babel.min.js">
+  </script>
+
+<script type="text/babel">
+  function App(props) { 
+    console.log(props)
+    return ( 
+      <div className='container'>
+        <main className='top-container'>
+          <h1>{props.name}</h1>
+          <img className='sally-image' src='https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg' />
+          <p>Hi! I'm Sally. I love playing video games, hanging out with friends and writing comics. I'm a full stack developer and love designing websites.</p>
+        </main>
+          <section className='education'>
+            <h1>Education</h1>
+            <p>I've graduated from Harvard university with a bachelor in Computer Science. I also have a degree in mathematics.</p>
+          </section>
+          <section className='contact-info'>
+            <section className="work-history">
+                <h1>Work History</h1>
+                <ul>
+                    <li>Worked construction for Venture Construction as a project manager from January 2018-December 2018. For my job I oversaw projects and made sure that everything was done in order and that all provisions were made for the project.</li>
+                    <li>Worked for Costa Vida as a cook from July 2016-February 2017. I took peoples orders on the go and cooked up the food for them.</li>
+                </ul>
+                
+            </section>
+            <address>
+              <label>Contact Info</label>
+              <a href='mailto:sally@example.com' target='_blank'>Email Me!
+              </a>
+            </address>
+          </section>
+      </div>
+    );
+  };
+ReactDOM.render(
+  <App name='Sally' />,
+  document.querySelector('#application-root')
+);
+</script>
+    <script src="script.js"></script>
+  </body>
+</html>
